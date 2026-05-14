@@ -20,6 +20,20 @@ Practical path: create a minimal Zo site whose build/output is replaced by this 
 
 **Public URL shape:** `sitename-yourhandle.zocomputer.io` after publish (see Zo docs).
 
+## Navigator Space + Zo Site (current setup)
+
+Live wiring on **dbostwick**’s Zo:
+
+| What                                                      | Where                                                                                                                                           |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Zo Site** (serves `control-center/dist` via Hono + Bun) | Workspace: `Git/b0stwickvibes/Repos/business-research-city/brc-control-center` — `server.ts` serves static files from `../control-center/dist`. |
+| **Public app URL**                                        | [https://brc-control-center-dbostwick.zocomputer.io](https://brc-control-center-dbostwick.zocomputer.io)                                        |
+| **zo.space page** (iframe + shared nav)                   | **`/research`** on your Space — same header nav as Home / Trading / Inventory / Greenroom, embedded dashboard.                                  |
+
+**After `git pull` on Zo:** `cd Git/b0stwickvibes/Repos/business-research-city/control-center && npm ci && npm run build`, then **`publish_site`** again for `brc-control-center` if Zo does not auto-redeploy (or restart the site’s production process from the Sites UI).
+
+Mirror of the `/research` Space route source (for edits in sync with live): `docs/zo-space-research-route.tsx`.
+
 ## Browser refresh
 
 After any deploy, use the app’s **Refresh** button (full reload). It does not replace `git pull` + rebuild on the server.
