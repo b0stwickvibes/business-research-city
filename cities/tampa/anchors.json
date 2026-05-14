@@ -1,0 +1,48 @@
+{
+  "city": "Tampa",
+  "state": "FL",
+  "trade_area_label": "tampa-city",
+  "trade_area_note": "Channel-side & Water Street hospitality / affluent spend thesis: prioritize maritime-adjacent corridors (Channelside, Channel District, Sparkman Wharf, Water Street Tampa) — not generic ‘downtown Tampa’ without water or district specificity. Stadium halos: Amalie Arena (NHL) + Raymond James (NFL) as metro calendar overlays; USF Tampa + future on-campus stadium (fall 2027 target) as emerging programmed calendar—verify construction / NCAA schedule commercially.",
+  "primary_university": "University of South Florida (Tampa campus)",
+  "primary_stadiums_arenas": [
+    "Amalie Arena — 401 Channelside Dr, Tampa (Tampa Bay Lightning; walkable Channelside cluster)",
+    "Raymond James Stadium — 4201 N Dale Mabry Hwy (Tampa Bay Buccaneers; northwest Tampa—rideshare halo, not walking-distance to Channelside)",
+    "USF on-campus football stadium — opening targeted fall 2027 (programming TBD; desk confidence medium until NCAA schedules firm)"
+  ],
+  "premium_hotel_clusters": [
+    "Water Street Tampa / JW Marriott / W Tampa / Edition-adjacent hospitality stack",
+    "Channelside / cruise port strip — hotels serving port, aquarium, arena walk-offs",
+    "Downtown core — office towers with ground-floor hospitality (corporate podium review applies)"
+  ],
+  "channel_waterfront_corridors": [
+    "Sparkman Wharf — container-hall restaurants + waterfront lawn (channelside spend gravity)",
+    "Garrison Channel / Ybor Channel adjacency — nautical spine for brand thesis",
+    "Riverwalk / Curtis Hixon waterfront (secondary vs Channelside for channel thesis but relevant for convention spill)"
+  ],
+  "high_wealth_corridors": [
+    "Hyde Park / SoHo discretionary retail spill (south of downtown—not primary channel thesis but wealth pool)",
+    "Harbour Island / Davis Islands waterfront residential (evening-trip rideshare into Channelside / Downtown)"
+  ],
+  "collegiate_bar_district_avoid": [
+    "Ybor late-night volume strips where enforcement and crowd mix skew ‘volume bar’ vs affluent celebration (block-by-block; some blocks viable—scout neighbor nuisance before underwriting patio bass)"
+  ],
+  "liquor_receipts_public": false,
+  "receipts_notes": "Florida has no Texas Comptroller-style statewide mixed-beverage gross receipts portal. Receipt ‘proof’ for spend gravity uses broker OM, subscriber comps (CoStar/Crexi), operator interviews, Beverage Journal / DOT industry lists, City of Tampa / Hillsborough permit activity, and Sunbiz filings—document confidence tier honestly.",
+  "permit_portal_hints": [
+    "City of Tampa — Accela / Development Coordination online (permits & entitlement research)",
+    "https://www.tampa.gov/permits-and-construction",
+    "Hillsborough County Land Use / zoning layers — verify parcel zoning letter before outdoor amplification thesis",
+    "Florida Building Code / Broward-style overlay not identical — Hillsborough noise nuisance + Tampa municipal code for amplified entertainment (parcel-specific)"
+  ],
+  "noise_entertainment_search_queries": [
+    "City of Tampa noise ordinance amplified sound outdoor dining",
+    "Hillsborough County Florida outdoor entertainment permit restaurant",
+    "Tampa special event permit amplified music Channel District",
+    "Tampa historic district certificate of appropriateness Ybor City"
+  ],
+  "metro_event_calendar_hints": [
+    "https://www.amaliearena.com/events/",
+    "https://www.buccaneers.com/stadium/events/",
+    "https://www.waterstreettampa.com/ — district events + retail leasing context"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "city": "Tampa",
+    "state": "FL",
+    "generatedFrom": [
+      "playbook-tampa-city-deep-review-review-2026-05-14.md",
+      "cities/tampa/data/scrapes/pdp/",
+      "anchors.json (trade_area tampa-city)"
+    ],
+    "coordinateDisclaimer": "Pins and venues are placed at approximate map locations. Miles shown are straight-line (as the crow flies), not driving distance.",
+    "venues": {
+      "amalie-channelside": {
+        "label": "Amalie Arena (Lightning)",
+        "lat": 27.9427,
+        "lng": -82.4518
+      },
+      "sparkman-wharf": {
+        "label": "Sparkman Wharf · waterfront dining",
+        "lat": 27.9457,
+        "lng": -82.4493
+      },
+      "raymond-james": {
+        "label": "Raymond James Stadium (Buccaneers)",
+        "lat": 27.9759,
+        "lng": -82.5033
+      },
+      "usf-tampa": {
+        "label": "USF Tampa campus (centroid)",
+        "lat": 28.0584,
+        "lng": -82.4139
+      },
+      "water-street-core": {
+        "label": "Water Street Tampa · Thousand & One district",
+        "lat": 27.9443,
+        "lng": -82.4545
+      }
+    }
+  },
+  "properties": [
+    {
+      "id": "449-s-12th-towers-channelside",
+      "headline": "449 S 12th St · Towers of Channelside retail band",
+      "addressLine": "449 S 12th St",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33602",
+      "lat": 27.9405,
+      "lng": -82.4508,
+      "corridor": "tampa-city · Channelside",
+      "sfDisplay": "±9,858 SF retail (PDP headline — verify contiguous)",
+      "rentDisplay": "Verify on subscribed PDP / OM",
+      "rentNotes": "4-star retail marketing — confirm NNN + TI",
+      "listingSource": "LoopNet 33935766",
+      "agents": [],
+      "images": [],
+      "artifactPaths": [
+        "cities/tampa/data/scrapes/pdp/loopnet-449-s-12th-st-towers-channelside.md"
+      ],
+      "flags": [
+        "Primary thesis fit — channel-side retail-native",
+        "Tower-base retail — condo_policy=review / podium coordination",
+        "Load-in + assembly TI survey mandatory"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "1001-water-ste-300-shell",
+      "headline": "1001 Water St · Thousand & One Ste 300 shell",
+      "addressLine": "1001 Water St",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33602",
+      "lat": 27.9443,
+      "lng": -82.4545,
+      "corridor": "tampa-city · Water Street Tampa",
+      "sfDisplay": "20,378 SF office shell (3rd floor)",
+      "rentDisplay": "$69.00/SF/YR marketing (incl. services per PDP)",
+      "rentNotes": "Adaptive reuse path — not retail-native envelope",
+      "listingSource": "LoopNet 20584351",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/wyakY1rgA3_fB8L6TmaAzfkyM_tNv7D_Ot64e4abzQ/110/1001-Water-St-Tampa-FL-Building-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/tampa/data/scrapes/pdp/loopnet-1001-water-st-thousand-one.md"
+      ],
+      "flags": [
+        "corporate_podium_policy=review — office shell to nightclub loads",
+        "Private elevators cited — after-hours ops + security stack"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "1001-water-ste-850-terrace",
+      "headline": "1001 Water St · Ste 850 shell + terrace",
+      "addressLine": "1001 Water St",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33602",
+      "lat": 27.9443,
+      "lng": -82.4545,
+      "corridor": "tampa-city · Water Street Tampa",
+      "sfDisplay": "10,187 SF shell + private terrace (8th floor)",
+      "rentDisplay": "$69.00/SF/YR marketing (incl. services per PDP)",
+      "rentNotes": "Terrace — amplified sound + neighbor risk",
+      "listingSource": "LoopNet 20584351 · Suite 850",
+      "agents": [],
+      "images": [],
+      "artifactPaths": [
+        "cities/tampa/data/scrapes/pdp/loopnet-1001-water-st-thousand-one.md"
+      ],
+      "flags": [
+        "Lifted lounge archetype vs ground-floor club",
+        "Outdoor programming — noise entitlement stack"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "1000-channelside-de-comp",
+      "headline": "1000 Channelside Dr · Ste D&E (peer comp)",
+      "addressLine": "1000 Channelside Dr",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33602",
+      "lat": 27.9448,
+      "lng": -82.4485,
+      "corridor": "tampa-city · Channel District peer",
+      "sfDisplay": "1,984 SF office/retail — below 6.5k gate",
+      "rentDisplay": "$22.00/SF/YR (marketing table)",
+      "rentNotes": "Assembly / rent comp — pairing with adjacent suites TBD",
+      "listingSource": "LoopNet 34007934",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/cRoxf-3vJpwB8ilZc3IwZvYMWEj3mraTNw_4IGMqhBw/110/1000-Channelside-Dr-Tampa-FL-Building-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/tampa/data/scrapes/pdp/loopnet-1000-channelside-dr.md"
+      ],
+      "flags": [
+        "Below expansion SF gate — broker assembly path",
+        "Strong channel geography for comps"
+      ],
+      "status": "peer"
+    },
+    {
+      "id": "514-n-franklin-second-gen",
+      "headline": "514 N Franklin St · second-gen restaurant shell",
+      "addressLine": "514 N Franklin St",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33602",
+      "lat": 27.9493,
+      "lng": -82.4582,
+      "corridor": "tampa-city · Downtown peer",
+      "sfDisplay": "1,800–3,800 SF (marketing range)",
+      "rentDisplay": "$45.00/SF/YR (marketing table)",
+      "rentNotes": "Built hood / kitchen — nightclub conversion = major TI path",
+      "listingSource": "LoopNet 20967828",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/8qfGKR0B3b9SuGYmltInStDCN38-sdXJbwrRP_xecQE/110/514-N-Franklin-St-Tampa-FL-Primary-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/tampa/data/scrapes/pdp/loopnet-514-n-franklin-st.md"
+      ],
+      "flags": [
+        "Below SF gate — capex / pricing comp",
+        "In-line retail — neighbor nuisance overlays"
+      ],
+      "status": "peer"
+    }
+  ]
+}

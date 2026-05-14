@@ -1,5 +1,6 @@
 import austinInventory from "@repo/cities/austin/data/inventory/austin-properties.json";
 import ftlauderdaleInventory from "@repo/cities/fort-lauderdale/data/inventory/fort-lauderdale-properties.json";
+import tampaInventory from "@repo/cities/tampa/data/inventory/tampa-properties.json";
 
 import type { InventoryBundle } from "../components/CityInventoryDashboard";
 
@@ -26,6 +27,13 @@ export const RESEARCH_MARKETS = [
     subtitle: "Hard Rock halo · Las Olas · Beach",
     repoSlug: "fort-lauderdale",
     bundle: ftlauderdaleInventory as InventoryBundle,
+  },
+  {
+    id: "tampa",
+    label: "Tampa, FL",
+    subtitle: "Channelside · Water Street · arena overlays",
+    repoSlug: "tampa",
+    bundle: tampaInventory as InventoryBundle,
   },
 ] as const satisfies readonly ResearchMarketRecord[];
 

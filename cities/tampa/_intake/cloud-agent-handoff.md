@@ -51,10 +51,10 @@ Match Austin / Fort Lauderdale shape:
 
 ## Done means
 
-- [ ] `anchors.json` committed with Tampa-specific corridors + honest receipts limitation.
-- [ ] Dated playbook in `playbooks/` references PDP filenames for deep-ranked deals.
-- [ ] ≥1 substantive index scrape markdown + PDP folder populated for prioritized listings (where portals allow scripted capture).
-- [ ] Inventory JSON optional but if omitted, playbook states “pins manifest pending QA.”
+- [x] `anchors.json` committed with Tampa-specific corridors + honest receipts limitation.
+- [x] Dated playbook in `playbooks/` (`playbook-tampa-city-deep-review-review-2026-05-14.md`) references PDP filenames for deep-ranked deals.
+- [x] ≥1 substantive index scrape markdown + PDP folder populated for prioritized listings (where portals allow scripted capture).
+- [x] `data/inventory/tampa-properties.json` added with `_meta.venues`; Control Center registers Tampa in `research-markets.tsx`.
 
 ---
 
