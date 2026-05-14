@@ -2,21 +2,29 @@
 
 This repo is the **single source of truth** for site-selection artifacts and the **control center** static UI.
 
-## 1. Git remote (GitHub: `b0stwicvibes`)
+## 1. Git remote (GitHub: `b0stwickvibes`)
+
+**Org/user name uses `b0stwickvibes`** (with **ck** in “wick”).
 
 Create an empty repo **without** initializing README (local tree already exists), then:
 
 ```bash
 cd /path/to/business-research-city
-git remote add origin git@github.com:b0stwicvibes/business-research-city.git
+git remote add origin git@github.com:b0stwickvibes/business-research-city.git
 git branch -M main
 git push -u origin main
+```
+
+If `origin` already exists but points at a typo URL:
+
+```bash
+git remote set-url origin git@github.com:b0stwickvibes/business-research-city.git
 ```
 
 HTTPS:
 
 ```bash
-git remote add origin https://github.com/b0stwicvibes/business-research-city.git
+git remote set-url origin https://github.com/b0stwickvibes/business-research-city.git
 ```
 
 ## 2. Production build (control center)
@@ -44,11 +52,11 @@ The in-app **Refresh** button runs `window.location.reload()` so the browser pic
 
 ## 4. Staying up to date (content)
 
-| Layer | How it stays fresh |
-| ----- | ------------------- |
+| Layer          | How it stays fresh                                                                                             |
+| -------------- | -------------------------------------------------------------------------------------------------------------- |
 | Inventory JSON | Commit under `cities/<slug>/data/inventory/`, extend `research-markets.tsx` when adding markets, then rebuild. |
-| Live site | Redeploy `dist` to Zo (manual or automated). |
-| Browser | User clicks **Refresh** after a new deploy to avoid stale cached HTML (hard refresh still available). |
+| Live site      | Redeploy `dist` to Zo (manual or automated).                                                                   |
+| Browser        | User clicks **Refresh** after a new deploy to avoid stale cached HTML (hard refresh still available).          |
 
 ## 5. Optional automation (later)
 
