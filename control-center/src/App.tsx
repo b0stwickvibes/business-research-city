@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import { GitBranch, LayoutGrid, RefreshCw, Terminal } from "lucide-react";
 
 import {
@@ -85,10 +85,11 @@ export default function App() {
 
   const tabHint =
     tab === "pins"
-      ? "Straight-line miles vs anchor venues — curated inventory JSON."
-      : "Step-by-step `/business-research-city` command builder + agent handoff package.";
+      ? "Straight-line mileage from each site to venues you benchmark. Data is refreshed when the deal team publishes an update."
+      : "Compose a briefing for whoever runs deeper market research outside this screen.";
 
   const builtAt = new Date(__BUILD_TIME__);
+  const marketFieldId = useId();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -99,7 +100,7 @@ export default function App() {
         Skip to workspace
       </a>
 
-      <header className="sticky top-0 z-40 border-b border-border bg-card/95 shadow-dashboard backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-border bg-card shadow-dashboard">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-4 py-4 sm:px-8">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
@@ -108,10 +109,10 @@ export default function App() {
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Site selection artifacts
+                  Portfolio expansion
                 </p>
                 <h1 className="text-xl font-semibold tracking-tight sm:text-[1.35rem]">
-                  business-research-city
+                  Site research
                 </h1>
               </div>
             </div>
@@ -123,26 +124,28 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setTab("pins")}
-                className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:flex-initial sm:justify-center sm:px-4 ${
+                aria-current={tab === "pins" ? "page" : undefined}
+                className={`flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:flex-initial sm:justify-center sm:px-4 ${
                   tab === "pins"
                     ? "border border-border bg-card text-card-foreground shadow-dashboard"
                     : "text-muted-foreground hover:bg-background/70 hover:text-foreground"
                 }`}
               >
                 <LayoutGrid className="h-4 w-4" />
-                Deal pins
+                Site shortlist
               </button>
               <button
                 type="button"
                 onClick={() => setTab("launcher")}
-                className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:flex-initial sm:justify-center sm:px-4 ${
+                aria-current={tab === "launcher" ? "page" : undefined}
+                className={`flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:flex-initial sm:justify-center sm:px-4 ${
                   tab === "launcher"
                     ? "border border-border bg-card text-card-foreground shadow-dashboard"
                     : "text-muted-foreground hover:bg-background/70 hover:text-foreground"
                 }`}
               >
                 <Terminal className="h-4 w-4" />
-                Research wizard
+                Research workflow
               </button>
             </nav>
 
@@ -150,17 +153,14 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => window.location.reload()}
-                className="inline-flex h-10 items-center gap-2 rounded-lg border border-border bg-card px-3 text-xs font-semibold uppercase tracking-wide text-foreground shadow-sm transition hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                title="Reload the app (use after a deploy or data refresh on Zo)"
+                className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-border bg-card px-3 text-xs font-semibold uppercase tracking-wide text-foreground shadow-sm transition hover:bg-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-10"
+                title="Reload this page after the team publishes a data refresh."
               >
                 <RefreshCw className="h-4 w-4" aria-hidden />
                 Refresh
               </button>
-              <span
-                className="hidden text-[11px] text-muted-foreground sm:inline"
-                title="Time this build was produced (Vite)"
-              >
-                Built{" "}
+              <span className="hidden text-xs text-muted-foreground sm:inline">
+                Last refreshed from build{" "}
                 {builtAt.toLocaleString(undefined, {
                   dateStyle: "medium",
                   timeStyle: "short",
@@ -175,15 +175,19 @@ export default function App() {
             </p>
 
             {tab === "pins" ? (
-              <label className="flex shrink-0 flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              <label
+                className="flex shrink-0 flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground"
+                htmlFor={marketFieldId}
+              >
                 Market
                 <select
+                  id={marketFieldId}
                   value={marketId}
                   onChange={(e) =>
                     setMarketId(e.target.value as ResearchMarketId)
                   }
-                  className="min-h-10 min-w-[14rem] rounded-lg border border-input bg-background px-3 py-2 text-sm font-medium normal-case tracking-normal text-foreground shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-ring"
-                  aria-label="Select research market"
+                  className="min-h-11 min-w-[14rem] rounded-lg border border-input bg-background px-3 py-2 text-sm font-medium normal-case tracking-normal text-foreground shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-ring"
+                  aria-label="Choose market"
                 >
                   {RESEARCH_MARKETS.map((m) => (
                     <option key={m.id} value={m.id}>
@@ -194,23 +198,18 @@ export default function App() {
               </label>
             ) : (
               <span className="rounded-lg border border-dashed border-border bg-muted/30 px-4 py-2 text-xs leading-snug text-muted-foreground">
-                Wizard targets any city slug — pinned markets live only on Deal
-                pins.
+                The workflow stepper can target any city; the shortlist above
+                stays on the markets your team has fully loaded.
               </span>
             )}
           </div>
 
           {tab === "pins" ? (
-            <p className="text-[11px] text-muted-foreground">
-              {activeRecord.bundle._meta.city},{" "}
-              {activeRecord.bundle._meta.state} ·{" "}
-              <span className="font-medium text-foreground">
-                {activeRecord.subtitle}
-              </span>{" "}
-              · repo{" "}
-              <code className="rounded-md bg-muted px-1 py-px font-mono text-[11px]">
-                cities/{activeRecord.repoSlug}/…
-              </code>
+            <p className="sr-only">
+              Internal data package: {activeRecord.bundle._meta.city},{" "}
+              {activeRecord.bundle._meta.state}; {activeRecord.subtitle}. Files
+              live under the {activeRecord.repoSlug} market folder in the
+              research workspace.
             </p>
           ) : null}
         </div>

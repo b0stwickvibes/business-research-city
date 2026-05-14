@@ -31,34 +31,36 @@ const DEPTH_OPTIONS: {
 }[] = [
   {
     value: "standard",
-    label: "Standard — index-first",
-    tagline: "Fast corridor scan without full PDP capture.",
+    label: "Standard coverage",
+    tagline: "Fast scan of marketed listings across the corridor.",
     bullets: [
-      "Pulls portal index / search markdown you can skim in under an hour.",
-      "Best first pass before you commit scraping budget on a corridor.",
-      "Less broker PDF / PDP capture — expect more “call broker” follow-up.",
+      "Pulls summarized listing pulls the team can read in roughly an hour.",
+      "Strong first cut before committing to heavier research hours.",
+      "Expect more broker follow-up versus a deeply captured pass.",
     ],
-    pickWhen: "New city diligence, scout-only, or you only need breadth.",
+    pickWhen: "Brand-new market mapping, scouting only, or you only need breadth.",
   },
   {
     value: "deep",
-    label: "Deep — PDP & guardrails",
-    tagline: "Property-level pulls where portals allow scripted HTML.",
+    label: "Full property pull",
+    tagline:
+      "Property-by-property saves where portals allow scripted downloads.",
     bullets: [
-      "Attempts PDP markdown (`data/scrapes/pdp/`), receipts bundles when available (Texas mixed beverage ladder, etc.).",
-      "Heavier automation; portals may degrade (Akamai / login)—captures vary by broker host.",
-      "Pairs with playbook synthesis for email-ready rejects + ranked targets.",
+      "Adds richer listing worksheets and supplemental source packs where they exist.",
+      "Login-heavy broker sites may block parts of the sweep.",
+      "Pairs with narrative playbooks describing rejects and shortlisted names.",
     ],
-    pickWhen: "You are ready for FTL / Austin–style dossiers and OM follow-up.",
+    pickWhen:
+      "You want Austin-style or Fort Lauderdale-style dossiers and broker outreach.",
   },
 ];
 
 const STEP_LABELS = [
   "Market",
-  "Trade area",
-  "Scrape depth",
-  "Guardrails",
-  "Review & handoff",
+  "Focus area",
+  "Depth",
+  "Screening rules",
+  "Copy brief",
 ] as const;
 
 export default function CityExpansionDashboard() {
@@ -140,14 +142,14 @@ export default function CityExpansionDashboard() {
   const copyCommand = async () => {
     if (!effectiveTradeArea.trim()) {
       window.alert(
-        'Add a trade-area label on Step 2 before copying (use the hyphenated playbook key — e.g. "waterfront-core").',
+        'Choose or enter a corridor label on Step 2 before copying the command.',
       );
       return;
     }
     try {
       await navigator.clipboard.writeText(command);
       window.alert(
-        "Copied slash command.\nPaste into Cursor chat or paste into Rules / Tasks for whichever agent runs ~/Projects/business-research-city.",
+        "Copied. Paste into the team's automation chat or playbook runner.",
       );
     } catch {
       window.alert(command);
@@ -168,20 +170,16 @@ export default function CityExpansionDashboard() {
       <div className="mx-auto max-w-4xl px-4 pt-8 sm:px-8">
         <header className="mb-8 space-y-2">
           <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-            business-research-city
+            Site research
           </p>
           <h1 className="text-3xl font-semibold tracking-tight text-foreground">
-            New city research wizard
+            Plan a new market run
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Builds the same{" "}
-            <code className="rounded-md bg-muted px-1 py-px font-mono text-xs">
-              /business-research-city
-            </code>{" "}
-            command we used for Austin and Fort Lauderdale—with plain-language
-            choices instead of unexplained presets. Coming next: wiring
-            Datablist or Git so an intake agent forwards the stakeholder brief
-            straight into this flow.
+            This wizard packages the briefing and command your research team runs
+            in Cursor. Outputs mirror what Austin and Fort Lauderdale already use.
+            Incoming intakes should land here instead of scattering half-context
+            in chat.
           </p>
         </header>
 
@@ -236,15 +234,15 @@ export default function CityExpansionDashboard() {
             </CardTitle>
             <CardDescription className="text-base leading-relaxed">
               {step === 0 &&
-                "City name becomes the filesystem slug; state drives postal + regulatory context cues in playbooks."}
+                "City drives taxes, permitting tone, and how we label files later."}
               {step === 1 &&
-                "Trade-area is only a playbook + tagging key—not a GIS polygon. Pick the narrative anchor that matches whose thesis brief you owe."}
+                "Pick the storyline that anchors the playbook (often an arena district, downtown spine, or beach hotel strip)."}
               {step === 2 &&
-                "Depth controls portal capture budget. Nothing here automatically blocks bad HTML from brokers—Akamai-heavy sites still degrade."}
+                "Depth decides how exhaustive the listing capture needs to be for this briefing."}
               {step === 3 &&
-                "Condo HOA shells and tower podiums violate the flagship thesis until leadership signs an explicit exception."}
+                "Default rules exclude condo HOA shells and certain tower podiums unless leadership opts in."}
               {step === 4 &&
-                "Copy once for tooling, paste again for whoever runs the Cursor agent backlog."}
+                "Copy the command plus the narrative briefing for whoever runs automation next."}
             </CardDescription>
           </CardHeader>
 
@@ -253,7 +251,7 @@ export default function CityExpansionDashboard() {
               <div className="space-y-6">
                 <div>
                   <p className="text-sm font-semibold text-foreground">
-                    Quick-fill from Deal pins markets
+                    Quick-fill pinned markets
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {pinnedMarkets.map((m) => (
@@ -272,9 +270,8 @@ export default function CityExpansionDashboard() {
                     ))}
                   </div>
                   <p className="mt-2 text-xs text-muted-foreground">
-                    Same cities as the Deal pins dropdown; tweak fields below
-                    when the brief differs (neighborhood nickname, typo, metro
-                    edge cases).
+                    Mirrors the Site shortlist dropdown; adjust spelling if HQ
+                    uses nicknames versus the legal mailing address.
                   </p>
                 </div>
 
@@ -288,8 +285,8 @@ export default function CityExpansionDashboard() {
                       className="h-11 rounded-lg border border-input bg-background px-3 text-sm outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring"
                     />
                     <span className="text-xs font-normal text-muted-foreground">
-                      Repo slug:{" "}
-                      <code className="font-mono">{slug || "…"}</code>
+                      Internal folder name:{" "}
+                      <span className="font-mono text-[0.8125rem]">{slug || "…"}</span>
                     </span>
                   </label>
                   <label className="flex flex-col gap-2 text-sm font-medium">
@@ -308,21 +305,17 @@ export default function CityExpansionDashboard() {
 
                 <div className="rounded-xl border bg-muted/40 p-4 text-sm leading-relaxed text-muted-foreground">
                   <p className="font-semibold text-foreground">
-                    What this creates downstream
+                    What lands in the workspace
                   </p>
                   <p className="mt-2">
-                    A coherent tree under{" "}
-                    <code className="font-mono text-xs">
-                      ~/Projects/business-research-city/cities/
-                      {slug || "slug"}/
-                    </code>{" "}
-                    mirrors Austin & Fort Lauderdale: anchors snapshot, markdown
-                    playbooks keyed to the trade label, scraped indices, PDP
-                    drops when depth is deep, and (optionally) a curated{" "}
-                    <code className="font-mono text-xs">
-                      data/inventory/*.json
-                    </code>{" "}
-                    for the Deal pins tab once coordinates + venues finish.
+                    You get a repeatable folder bundle for{" "}
+                    <span className="font-medium text-foreground">
+                      {city.trim() || "the city"}
+                    </span>
+                    , mirroring prior markets: a snapshot of anchors, written
+                    playbooks tied to your focus choice, scraped listing dumps,
+                    and optional deeper captures when Depth is Full. Saving
+                    coordinates unlocks today&apos;s distance table after QA.
                   </p>
                 </div>
 
@@ -331,10 +324,9 @@ export default function CityExpansionDashboard() {
                     Intake brief (optional)
                   </span>
                   <span className="text-xs text-muted-foreground">
-                    When Datablist, email, or Git issues flag a requested city,
-                    paste the verbatim stakeholder bullets here—they travel into
-                    the agent package on the Review step but never hit the CLI
-                    command.
+                    Paste stakeholder bullets from intake email or chat. They ride
+                    along in the briefing on the final step and never change the
+                    copyable command itself.
                   </span>
                   <textarea
                     rows={5}
@@ -352,9 +344,8 @@ export default function CityExpansionDashboard() {
                 {presets.length > 0 ? (
                   <>
                     <p className="text-sm text-muted-foreground">
-                      Presets are checked into this repo&apos;s playbooks /
-                      anchors. Choose the storyline that fits the expansion
-                      brief.
+                      Presets bundle the corridors we already modeled. Pick the one
+                      that matches the sponsoring thesis.
                     </p>
                     <div className="space-y-3">
                       {presets.map((p) => (
@@ -374,9 +365,10 @@ export default function CityExpansionDashboard() {
                               <p className="font-semibold text-foreground">
                                 {p.label}
                               </p>
-                              <code className="mt-1 block font-mono text-[11px] text-muted-foreground">
-                                --trade-area={p.value}
-                              </code>
+                              <p className="mt-1 text-xs text-muted-foreground">
+                                Internal key{" "}
+                                <span className="font-mono">{p.value}</span>
+                              </p>
                             </div>
                             <span
                               className={cn(
@@ -398,14 +390,11 @@ export default function CityExpansionDashboard() {
                 ) : (
                   <div className="space-y-3">
                     <p className="text-sm text-muted-foreground">
-                      No baked-in presets for{" "}
-                      <strong className="text-foreground">{slug}</strong> yet.
-                      Type a hyphenated playbook key—the orchestrator prompts
-                      you to align naming when the first playbook lands (e.g.{" "}
-                      <code className="rounded bg-muted px-1 font-mono text-[11px]">
-                        waterfront-hospitality-core
-                      </code>
-                      ).
+                      No presets exist for{" "}
+                      <strong className="text-foreground">{city.trim()}</strong>{" "}
+                      yet. Describe a hyphenated corridor label aligned with how
+                      the first playbook should read (examples: waterfront core,
+                      beach strip, arena district).
                     </p>
                     <input
                       value={tradeCustom}
@@ -456,9 +445,9 @@ export default function CityExpansionDashboard() {
                     Condo / shared HOA shell
                   </label>
                   <p className="text-xs text-muted-foreground">
-                    Flagship concepts expect fee-simple control of frontage /
-                    acoustics—retail condominium stacks default to appendix or
-                    hard reject depending on posture here.
+                    Flagship concepts assume control of entrances and noise.
+                    Shared condo retail stacks usually sit on hold or exit until
+                    there is sponsor cover.
                   </p>
                   <select
                     value={condoPolicy}
@@ -466,10 +455,10 @@ export default function CityExpansionDashboard() {
                     className="mt-3 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <option value="reject">
-                      Hard reject (default playbook posture)
+                      Standard out (default posture)
                     </option>
                     <option value="review">
-                      Route to HOA appendix lane for leadership opt-in
+                      Send to HOA review lane for leadership opt-in
                     </option>
                   </select>
                 </div>
@@ -479,9 +468,9 @@ export default function CityExpansionDashboard() {
                     Corporate Class-A podium
                   </label>
                   <p className="text-xs text-muted-foreground">
-                    Institutional tower bases carry operating agreement drag and
-                    late-night amplified music conflicts—normally routed out of
-                    the core thesis until there is sponsor cover.
+                    Major office podium bases bundle operating friction and noise
+                    curfews. Normally held outside the flagship thesis unless
+                    you explicitly widen scope.
                   </p>
                   <select
                     value={corporatePodiumPolicy}
@@ -489,7 +478,7 @@ export default function CityExpansionDashboard() {
                     className="mt-3 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <option value="reject">
-                      Hard reject (tower podium appendix excluded)
+                      Standard out (tower podium appendix excluded)
                     </option>
                     <option value="review">
                       Allow tower appendix scouting with explicit caveat
@@ -504,7 +493,7 @@ export default function CityExpansionDashboard() {
               <div className="space-y-8">
                 <div>
                   <p className="text-sm font-semibold text-foreground">
-                    Slash command
+                    Automated command line
                   </p>
                   <pre className="mt-3 whitespace-pre-wrap break-all rounded-xl border bg-muted px-4 py-3 font-mono text-xs leading-relaxed text-foreground">
                     {command}
@@ -514,41 +503,35 @@ export default function CityExpansionDashboard() {
                     onClick={copyCommand}
                   >
                     <ClipboardCopy className="h-4 w-4" />
-                    Copy command only
+                    Copy automation command
                   </Button>
                   <p className="mt-3 text-xs text-muted-foreground">
-                    Effective trade area on the CLI:{" "}
-                    <code className="font-mono">{effectiveTradeArea}</code>
+                    Focus corridor passed to tooling:{" "}
+                    <span className="font-mono text-[11px]">
+                      {effectiveTradeArea}
+                    </span>
                   </p>
                 </div>
 
                 <div>
                   <p className="text-sm font-semibold text-foreground">
-                    Deliverables checklist for operator + agent parity
+                    Deliverables the team expects back
                   </p>
                   <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                    <li>• Structured anchors snapshot + narrative notes.</li>
+                    <li>Structured anchor recap plus narrative rationale.</li>
                     <li>
-                      • At least one email-ready playbook with ranked targets +
-                      rejects + source table.
+                      At least one decision-ready playbook with ranked targets,
+                      exclusions, and source notes.
                     </li>
                     <li>
-                      • Portal index markdown dumps + (
-                      {depth === "deep" ? (
-                        <>
-                          PDP captures under{" "}
-                          <code className="rounded bg-muted px-1 font-mono text-[11px]">
-                            data/scrapes/pdp/
-                          </code>
-                        </>
-                      ) : (
-                        "skipping PDP pass until depth flips to deep"
-                      )}
-                      ).
+                      Marketed listings captured at the depth you selected{" "}
+                      {depth === "deep"
+                        ? "(including richer property worksheets when portals cooperate)."
+                        : "(lighter pass until you select Full property pull in Step 3)."}{" "}
                     </li>
                     <li>
-                      • Optional pins manifest powering this UI after manual QA
-                      of coords + `_meta.venues`.
+                      Optional shortlist powering the investor table after QA on
+                      addresses and benchmarks.
                     </li>
                   </ul>
                   <textarea
@@ -562,24 +545,19 @@ export default function CityExpansionDashboard() {
                     className="mt-3"
                     onClick={copyAgentBrief}
                   >
-                    Copy full briefing for intake agent / Cursor scratchpad
+                    Copy full briefing (handoff-ready)
                   </Button>
                 </div>
 
                 <div className="rounded-xl border border-dashed bg-muted/30 p-4 text-sm leading-relaxed text-muted-foreground">
                   <Building2 className="mb-2 inline h-5 w-5 align-text-bottom text-muted-foreground" />
                   <p className="font-semibold text-foreground">
-                    Near-term automation stance
+                    Coordination stance
                   </p>
                   <p className="mt-2">
-                    Datablist (or whichever intake queue is live) should mint a
-                    Git issue / branch + deposit stakeholder context and
-                    requested trade thesis. First agent extracts those fields,
-                    echoes this package, uploads scrapes—the second agent
-                    (Composer / Sonnet / Gemini) consumes the synced repo
-                    exactly like we iterated for{" "}
-                    <span className="font-medium text-foreground">Austin</span>{" "}
-                    & Fort Lauderdale pins.
+                    Intakes should mint a tracked request with stakeholder copy,
+                    then point automation at the synced workspace the same way
+                    Austin and Fort Lauderdale iterations already do.
                   </p>
                 </div>
               </div>
