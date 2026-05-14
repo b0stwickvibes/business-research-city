@@ -34,6 +34,21 @@ Live wiring on **dbostwick**’s Zo:
 
 Mirror of the `/research` Space route source (for edits in sync with live): `docs/zo-space-research-route.tsx`.
 
+## Git push → Zo (reuse your BrainOS trigger)
+
+You already have **GitHub → Zo** refresh wired for **BrainOS**. Do **not** add a second, parallel stack for this repo unless you want to: hook **`business-research-city`** into the **same** pipeline (extra clone path / same webhook / same Automation instruction batch).
+
+After Zo has an updated clone of `b0stwickvibes/business-research-city`, the only extra steps for the live dashboard are:
+
+```bash
+cd Git/b0stwickvibes/Repos/business-research-city/control-center
+npm ci && npm run build
+```
+
+Then **republish** the Zo Site at `Git/b0stwickvibes/Repos/business-research-city/brc-control-center` (Sites UI or `publish_site` with that `site_path`) so `*.zocomputer.io` serves the new `dist/`. Navigator Space `/research` iframes that URL, so it updates on the next full reload.
+
+If your BrainOS flow is a **Supabase Edge Function**, **GitHub webhook**, or **Zo Automation** that runs shell on push, append these two steps (pull already handled for BrainOS, or add a second `git pull` in this repo path) to that same job.
+
 ## Browser refresh
 
 After any deploy, use the app’s **Refresh** button (full reload). It does not replace `git pull` + rebuild on the server.
