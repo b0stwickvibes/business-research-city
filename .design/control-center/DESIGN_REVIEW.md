@@ -32,8 +32,7 @@ _(none)_ — Re-run the screenshot script after major UI changes.
 
 ## Could Improve
 
-1. **URL query params** for `market` + `tab` (see `TASKS.md` deferred).
-2. **Reduced motion** for expandable row (`prefers-reduced-motion` + `scrollIntoView`).
+1. **Reduced motion** for expandable row (`prefers-reduced-motion` + `scrollIntoView`).
 
 ## What Works Well
 
@@ -44,6 +43,7 @@ _(none)_ — Re-run the screenshot script after major UI changes.
 
 ## Files verified
 
+- `control-center/src/App.tsx`
 - `control-center/src/components/CityInventoryDashboard.tsx`
 - `control-center/src/components/ui/badge.tsx`
 - `.design/control-center/DESIGN_BRIEF.md`

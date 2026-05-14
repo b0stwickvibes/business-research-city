@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { GitBranch, LayoutGrid, RefreshCw, Terminal } from "lucide-react";
 
 import {
@@ -10,11 +10,67 @@ import CityInventoryDashboard from "./components/CityInventoryDashboard";
 
 type Tab = "pins" | "launcher";
 
+const DEFAULT_TAB: Tab = "pins";
+
+function parseTabParam(params: URLSearchParams): Tab | null {
+  const raw = params.get("tab")?.trim().toLowerCase();
+  if (raw === "pins" || raw === "deal-pins") return "pins";
+  if (raw === "launcher" || raw === "wizard" || raw === "research-wizard")
+    return "launcher";
+  return null;
+}
+
+function parseMarketParam(params: URLSearchParams): ResearchMarketId | null {
+  const raw = params.get("market")?.trim();
+  if (!raw) return null;
+  const hit = RESEARCH_MARKETS.find((m) => m.id === raw);
+  return hit ? (hit.id as ResearchMarketId) : null;
+}
+
+function readStateFromSearch(search: string): {
+  tab: Tab;
+  marketId: ResearchMarketId;
+} {
+  const params = new URLSearchParams(search);
+  const tab = parseTabParam(params) ?? DEFAULT_TAB;
+  const marketId =
+    parseMarketParam(params) ?? (RESEARCH_MARKETS[0]?.id as ResearchMarketId);
+  return { tab, marketId };
+}
+
+function replaceAppSearchParams(tab: Tab, marketId: ResearchMarketId) {
+  const params = new URLSearchParams();
+  params.set("tab", tab);
+  params.set("market", marketId);
+  const qs = params.toString();
+  const path = window.location.pathname || "/";
+  const next = `${path}?${qs}`;
+  if (`${window.location.pathname}${window.location.search}` !== next) {
+    window.history.replaceState(null, "", next);
+  }
+}
+
 export default function App() {
-  const [tab, setTab] = useState<Tab>("pins");
-  const [marketId, setMarketId] = useState<ResearchMarketId>(
-    RESEARCH_MARKETS[0]?.id ?? "austin",
+  const [tab, setTab] = useState<Tab>(
+    () => readStateFromSearch(window.location.search).tab,
   );
+  const [marketId, setMarketId] = useState<ResearchMarketId>(
+    () => readStateFromSearch(window.location.search).marketId,
+  );
+
+  useEffect(() => {
+    replaceAppSearchParams(tab, marketId);
+  }, [tab, marketId]);
+
+  useEffect(() => {
+    const onPop = () => {
+      const next = readStateFromSearch(window.location.search);
+      setTab(next.tab);
+      setMarketId(next.marketId);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   const activeMarket = useMemo(() => {
     const m = RESEARCH_MARKETS.find((x) => x.id === marketId);

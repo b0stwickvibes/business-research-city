@@ -36,7 +36,7 @@ Date: 2026-05-14
 
 ## Deferred (backlog)
 
-- [ ] URL query sync (`?market=` / `?tab=`).
+- [x] **URL query sync**: `?market=<id>` (e.g. `austin`, `fort-lauderdale`) and `?tab=pins|launcher` — aliases: `wizard` → launcher, `deal-pins` → pins. Hydrate on load; `replaceState` on change; `popstate` for back/forward.
 - [ ] Glob-based market discovery instead of static `research-markets.tsx` imports.
 - [ ] Dark mode token pair.
 - [ ] **Rewrite git history** to drop the 59 MB file from past commits (optional — use BFG / `git filter-repo` if clone size matters).
