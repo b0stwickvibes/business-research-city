@@ -1,0 +1,29 @@
+# Minimal handoff artifact — intake agent → research agent (Cursor/Datablist/git)
+# Copy to cities/<slug>/_intake/request.yaml once the slug folder exists.
+
+version: 1
+
+request:
+  summary: >-
+    Expansion scout for ______—anchor venue / thesis in one sentence.
+  requested_by: name-or-queue-id
+  source: datablist-email-github-issue
+
+city:
+  name: Springfield
+  state: IL # two-letter USPS
+
+research:
+  # Hyphen key for playbooks (--trade-area=); aligns with anchors / corridor narrative
+  trade_area_key: metro-hospitality-core
+  depth: deep # standard | deep
+  condo_policy: reject # reject | review
+  corporate_podium_policy: reject # reject | review
+
+stakeholder_context: |
+  Free text: adjacency thesis, comps, timing, exclusions.
+
+automation_hints:
+  # Optional: ticketing / branch names for downstream git integrations
+  target_branch_prefix: intake/
+  datablist_record_url: ""

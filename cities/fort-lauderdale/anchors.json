@@ -1,0 +1,44 @@
+{
+  "city": "Fort Lauderdale",
+  "state": "FL",
+  "trade_area_label": "hard-rock-hospitality-core",
+  "trade_area_note": "Broward hotel / Las Olas–beach spender gravity ↔ ~25–35 mi (~30–45 min rideshare peak) to Hard Rock Stadium (Miami Gardens) for Dolphins + mega-events + 2026 World Cup / concerts. Not collegiate-stadium hugging—use spikes as metro calendar overlay.",
+  "primary_university": "Florida Atlantic University (FAU Boca Raton main campus)",
+  "primary_stadiums_arenas": [
+    "Hard Rock Stadium — Miami Gardens (NFL Dolphins, concerts, FIFA World Cup 2026 anchor venue, Formula 1 Miami GP)",
+    "FAU Stadium — Boca Raton (collegiate football / parents-weekend halo; ~35–45 min Fort Lauderdale CBD per maps agent)"
+  ],
+  "premium_hotel_clusters": [
+    "Fort Lauderdale Beach oceanfront corridor (Four Seasons Beach, Conrad, Ritz-Carlton Ft. Lauderdale Atlantic, Atlantic Hotel & Spa, Kimpton Shorebreak)",
+    "Downtown Las Olas / New River fringe (Hyatt Centric Las Olas, W Fort Lauderdale vicinity, commuter hotels)"
+  ],
+  "high_wealth_corridors": [
+    "E Las Olas Blvd retail / dine spine (premium street frontage premiums)",
+    "Harbor Isles / Coral Ridge waterways (boats + second homes; spillover diners)",
+    "17th Street Causeway waterfront office-hospitality corridor (Intl airport / yachts)"
+  ],
+  "collegiate_bar_district_avoid": [
+    "Pure volume spring-break beach strips north of downtown (seasonal nuisance enforcement risk—police nuisance enforcement history varies by block; verify permits block-by-block)",
+    "Cheap shot-bar clusters that compete on cover/drink specials rather than affluent celebration spend (scout Himmarshee late-night competitively—some blocks qualify)"
+  ],
+  "liquor_receipts_public": false,
+  "receipts_notes": "No Texas-style statewide mixed-beverage gross receipts portal in FL comparable to TX Comptroller. Use landlord/broker OM, comps from recent sales flyers (Crexi/CoStar subscriber data), BeverageJournal/DOT industry lists, Broward zoning special exceptions, Sunbiz filings, permit activity in LauderBuild—low-medium confidence versus TX ladder.",
+  "permit_portal_hints": [
+    "Fort Lauderdale permitting—LauderBuild online portal",
+    "https://www.fortlauderdale.gov/government/departments-a-h/development-services/building-services",
+    "https://www.fortlauderdale.gov/business/building-permits — General permitting / LauderBuild",
+    "Historic + commercial review exclusions apply for some walk-through permit types—flag before assuming fast bar build timelines",
+    "Broward County Code / City Code of Ordinances (Municode) for nuisance / noise investigations",
+    "https://library.municode.com/fl/fort_lauderdale/codes/code_of_ordinances"
+  ],
+  "noise_entertainment_search_queries": [
+    "Fort Lauderdale Special Entertainment Overlay District Chapter 5 licensed establishments hours ordinance C-26-05",
+    "Fort Lauderdale amplified music outdoor seating restaurant permit",
+    "Broward County noise ordinance amplified entertainment hospitality",
+    "City of Fort Lauderdale code compliance noise complaint Community Enhancement 954-828-8000",
+    "Florida marine vessel amplified music ordinance 25 feet Fort Lauderdale waterways"
+  ],
+  "metro_event_calendar_hints": [
+    "https://www.hardrockstadium.com/events/ — Dolphins + stadium concerts + World Cup 2026 slate + F1-associated programming"
+  ]
+}

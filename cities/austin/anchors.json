@@ -1,0 +1,68 @@
+{
+  "city": "Austin",
+  "state": "TX",
+  "trade_area_preset": "ut-moody-core",
+  "primary_university": "The University of Texas at Austin",
+  "primary_stadiums_arenas": [
+    "Darrell K Royal–Texas Memorial Stadium (DKR)",
+    "UFCU Disch–Falk Field (campus athletics adjacency)",
+    "Moody Center · ACL Live · 3TEN (Arena & club cluster)",
+    "Moody Amphitheater at Waterloo Greenway",
+    "(Out of polygon FYI) Q2 Stadium — Austin FC / north corridor; keep separate vs ut-moody-core thesis"
+  ],
+  "premium_hotel_clusters": [
+    "Congress / CBD corridor: JW Marriott Austin, Marriott Downtown, Fairmont Austin, Omni Austin Downtown, Hilton Austin, White Lodging cluster",
+    "2nd Street / Colorado River west bank: Hyatt Regency, Radisson Blu (verify brands), Hyatt House / extended-stay layering",
+    "West 6th · Warehouse periphery boutique stack: Proper Hotel, Archer at the Domain is out-of-pocket for this polygon focus",
+    "Classic hospitality anchors: Stephen F. Austin (Omni affiliate historical), LINE Austin (+ Rainey nightlife caution below)"
+  ],
+  "high_wealth_corridors": [
+    "West 6th / Warehouse District lateral bar + supper club gravitas (mature-money daypart bleed from hotels)",
+    "Red River Cultural District + Old / East Sixth entertainment spine south toward Moody (live-music land-use tolerance materially different from lakeside residential canyon)",
+    "Congress Avenue spine Frost / hotel retail (dominated by podium retail → apply corporate_podium_policy filter)",
+    "Waterloo Greenway / Waller Creek hardscape feeding Moody Amphitheater evening surge"
+  ],
+  "corridor_classification_notes_ut_moody_core": [
+    "**Rainey Street + Rainey-adjacent high-rise residential towers (~ south shore / East-side lakefront canyon):** extreme caution for NEW outdoor amplified + late-hours bass; HOA / residential complaint vectors differ from nightlife-zoned corridors even when physically proximate to hotels.",
+    "**Red River Cultural District + 6th & Neches / Red River intersections:** geographically NOT Rainey. Venues referencing **510 / 512 Neches** sit squarely in Old Sixth / Entertainment overlay logic — amplified entertainment tolerance historically higher than lakeside canyon towers (**still site-specific entitlement work** — not blanket approval).",
+    "**CBD Class-A podium retail (approx. Frost Bank Tower / Austin Tower / Endeavor-listed Congress bases):** structurally analogous to rejected **100 / 501 Congress** skyscraper pedestal retail archetypes — penalize landlord CAM friction + roof rights unknowability absent explicit exceptions."
+  ],
+  "mislabel_warnings": [
+    "**510 Neches ≠ Rainey-orbit attribution.** Zo `maps_search` corroborates 510 Neches lies ~north/west relative to labelled Rainey Street centroid; classify as **Sixth/Neches / Old Sixth / RR-adjacent** unless future survey says otherwise.",
+    "Urban marketing PDFs referencing “Rainey Street District” branding for **44 East Ave** denote **tower podium / condo retail strata** (`condo_policy=reject` baseline) regardless of directional marketing copy."
+  ],
+  "collegiate_bar_district_avoid": [
+    "East Sixth Street corridor between Congress Avenue and Interstate 35 — high-volume collegiate shot-bar economics (penalty to hunt-score vs ultra-lounge thesis)",
+    "Immediate West Campus dive-dense perimeter — reconcile exact campus-edge polygon via maps but **keep categorical avoid** operational default"
+  ],
+  "liquor_receipts_public": true,
+  "receipts_notes": "Texas Comptroller publishes obligation-level filings on Texas Open Data: dataset `naix-2893` Mixed Beverage Gross Receipts (https://data.texas.gov/resource/naix-2893.json). Rows include liquor/wine/beer/cover buckets but **omit explicit food-sales columns** verified 2026-05-13; food-vs-alcohol margin requires alternate exports or CFO modeling. Receipt pulls this run archived under cities/austin/data/receipts/*.json + receipt-analysis-notes-2026-05-13.md.",
+  "permit_portal_hints": [
+    "City of Austin · Development Services (DS) — permitting / inspections hub migrated during 2026 website redesign → confirm live path via site search (“ABC portal”, “Residential Plan Review”) before deep automation",
+    "Austin Municipal Code Chapter 9-2 Noise & Amplified Sound (consult Municode table-of-contents landing; deeplinks brittle post-CivicPlus refresh)"
+  ],
+  "noise_entertainment_search_queries": [
+    "Austin TX Chapter 9-2 amplified sound outdoor venue restaurant overlay",
+    "Austin Residential Plan Review amplified sound mitigation",
+    "Red River Cultural District outdoor music venue entitlement Austin"
+  ],
+  "maps_distance_confidence_snapshots_this_run": {
+    "510_neches_to_moody_center_ped_orient_distance_miles_about": "~1.5 walking miles (HIGH confidence Zo agent summary wording; MEDIUM if exact path not reproduced)",
+    "red_river_district centroid vs rainey centroid": "Separate Google Maps place-handle coordinates returned by Zo; treat as MEDIUM confidence illustrative only"
+  },
+  "discovery_sources_this_run": [
+    "Zo maps_search — 510 Neches vs Rainey vs Moody vs Red River district sanity",
+    "Zo web_search — Comptroller / ordinance discovery seeds",
+    "Firecrawl scrape — Crexi Downtown Austin Restaurants index markdown",
+    "Firecrawl scrape — CityFeet + broker marketing sites + LoopNet teaser text",
+    "Socrata API pull — Mixed Beverage JSON slice for ZIPs {78701,78703,78705}"
+  ],
+  "generated_at": "2026-05-13",
+  "research_run_confidence_gate": {
+    "condo_policy": "reject",
+    "corporate_podium_policy": "reject",
+    "depth": "deep",
+    "pdp_inventory_open_web": "PARTIAL — LoopNet + Crexi PDP HTML bot-gated via Akamai/direct 403 attempts; PDP coverage augmented with broker-hosted Wix flyers (RRG/Urbanspace) + CityFeet shell page",
+    "compliant_ge_6500sf_open_market_deep_shortlist_coverage": "LOW — scarce clean pins meeting ALL gates simultaneously surfaced without broker login"
+  }
+}

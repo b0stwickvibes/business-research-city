@@ -1,0 +1,256 @@
+{
+  "_meta": {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "generatedFrom": [
+      "playbook-hard-rock-hospitality-core-deep-review-review-2026-05-13.md",
+      "cities/fort-lauderdale/data/scrapes/pdp/",
+      "anchors.json (trade_area hard-rock-hospitality-core)"
+    ],
+    "coordinateDisclaimer": "Property and venue coordinates are approximate map centroids. Miles shown are straight-line (haversine), not drive time.",
+    "venues": {
+      "hard-rock": {
+        "label": "Hard Rock Stadium · Miami Gardens",
+        "lat": 25.958,
+        "lng": -80.2389
+      },
+      "las-olas-core": {
+        "label": "Las Olas / Downtown FTL spine",
+        "lat": 26.1204,
+        "lng": -80.138
+      },
+      "fort-lauderdale-beach": {
+        "label": "Ft. Lauderdale Beach hotel strip",
+        "lat": 26.125,
+        "lng": -80.104
+      }
+    }
+  },
+  "properties": [
+    {
+      "id": "914-nw-6th-freestanding",
+      "headline": "914 NW 6th · Freestanding FAT Village stack",
+      "addressLine": "914 NW 6th St",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33311",
+      "lat": 26.1305,
+      "lng": -80.1503,
+      "corridor": "hard-rock-hospitality-core · FAT Village",
+      "sfDisplay": "±8,396 SF stacking (combo Ste 100+103+200; Ste 200 ±4,238 SF)",
+      "rentDisplay": "From ±$25.00 PSF/YR noted on LoopNet PDP",
+      "rentNotes": "NNN terminology on suites—verify OM / parking pool",
+      "listingSource": "LoopNet 40360606 · Native Realty",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/ty1V9my8ywW4apGcSGOh2kKrVu7mOYtPZof4YbEwUMg/110/914-NW-6th-St-Fort-Lauderdale-FL-Primary-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/loopnet-914-nw-6th-st.md"
+      ],
+      "flags": [
+        "Outdoor yard / patio marketed—confirm amplified + hour restrictions",
+        "Office/Retail DNA—roof rights + nightclub assembly load TI path",
+        "condo_policy=review less relevant (fee-simple)—neighbor nuisance still counts"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "1515-se-17th-waterfront",
+      "headline": "1515–1637 SE 17th St · 17th Street Quay",
+      "addressLine": "1515–1637 SE 17th St",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33316",
+      "lat": 26.1075,
+      "lng": -80.1256,
+      "corridor": "hard-rock-hospitality-core · SE 17th waterfront",
+      "sfDisplay": "72–13,956 SF marketed; ±5,004 SF second-gen restaurant divisible",
+      "rentDisplay": "Suite cites ~$30–$45 PSF/YR zones on PDP",
+      "rentNotes": "Assemble contiguous ≥6.5k SF via broker—not guaranteed inline",
+      "listingSource": "LoopNet 40094820",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/74EtaPnNodyKqb5MVQgd_zGBcsO_s-mS0AdoBcc-OTI/110/1515-1637-SE-17th-St-Fort-Lauderdale-FL-Primary-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/loopnet-1515-1637-se-17th-st.md"
+      ],
+      "flags": [
+        "Garage podium / marina arrival–corporate_podium_policy=review",
+        "~983 stalls referenced on marketing table—SNDA/CCR diligence",
+        "Outdoor amplified overlays—city noise counsel per parcel zoning"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "4066-broward-strip",
+      "headline": "4066 Broward Blvd · ±7k strip / drive‑through reposition",
+      "addressLine": "4066 Broward Blvd",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33317",
+      "lat": 26.1218,
+      "lng": -80.1735,
+      "corridor": "Broward arterial (uplift trade area)",
+      "sfDisplay": "800–7,000 SF contiguous marketing band",
+      "rentDisplay": "$25.00 PSF/YR cited NNN band on PDP",
+      "rentNotes": "Drive-through/restaurant chatter—Yellow for brand vs Las Olas spend",
+      "listingSource": "LoopNet 39292308",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/SVVmWZSy9zVBfUukWeMU67rOkhOblFJO4glaz2vmvV8/110/4066-Broward-Blvd-Fort-Lauderdale-FL-Primary-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/loopnet-4066-broward-blvd.md"
+      ],
+      "flags": [
+        "Suburban arterial identity × premium ultra-lounge brand tension",
+        "Confirm alley/rear service + valet choreography vs suburban curb cut"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "115-nw-sistrunk",
+      "headline": "115 NW 6th · Sistrunk Marketplace / brewery campus",
+      "addressLine": "115 NW 6th St",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33311",
+      "lat": 26.1332,
+      "lng": -80.1543,
+      "corridor": "Progresso / Sistrunk",
+      "sfDisplay": "350–10,950 SF ladders; ±5,000 SF block flagged on PDP grid",
+      "rentDisplay": "$40 PSF/YR cite on ±5k block (NNN)—verify OM",
+      "rentNotes": "Parking ratio vs acre GLA flagged in playbook review",
+      "listingSource": "LoopNet 26790523",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/4kj0R_n4M9Hq7f13yvxkwcfoqudkQZmb91nL1tpMEZo/110/115-NW-6th-St-Fort-Lauderdale-FL-Building-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/loopnet-115-nw-6th-st-sistrunk.md"
+      ],
+      "flags": [
+        "Brightline synergy marketing—sense-check walk/rideshare reality",
+        "Warehouse/mezzanine narrative—verify entitlement path for nightclub assembly"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "2601-oakland-office",
+      "headline": "2601 E Oakland Park Blvd · Coral Ridge office slabs",
+      "addressLine": "2601 E Oakland Park Blvd",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33306",
+      "lat": 26.1729,
+      "lng": -80.1365,
+      "corridor": "Coral Ridge / US‑1 synergy",
+      "sfDisplay": "±1,000–14,759 SF ladders (boutique Coral Ridge PDP)",
+      "rentDisplay": "Upon request / suite-by-suite on PDP",
+      "rentNotes": "Free parking marketed—tower_podium_exception_review archetype office shell",
+      "listingSource": "LoopNet 17155440 · NAI/Merin Hunter Codman",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/LSH3h2_LfEeAQ08zImYEdUPGaOnoUivZOixa6yF0mhs/110/2601-E-Oakland-Park-Blvd-Fort-Lauderdale-FL-Primary-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/loopnet-2601-e-oakland-park-blvd.md"
+      ],
+      "flags": [
+        "Office-campus arrival vs experiential shell—heavy TI entitlement risk",
+        "Validate roof/deck/struc load before spectacle assumption"
+      ],
+      "status": "appendix"
+    },
+    {
+      "id": "500-n-andrews-podium",
+      "headline": "500 N Andrews · turnkey bar (tower-base retail archetype)",
+      "addressLine": "500 N Andrews Ave",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33301",
+      "lat": 26.1276,
+      "lng": -80.1465,
+      "corridor": "CBD / courthouse-adjacent",
+      "sfDisplay": "±2,912 SF turnkey second-gen bar",
+      "rentDisplay": "~$38.24 PSF/YR cited PDP",
+      "rentNotes": "Mid-rise strata context—tower_podium playbook lane",
+      "listingSource": "LoopNet 25513385",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/CZKctJTYIFumkGfIhwHLQ7Mbu_tsvtTDbiO5T-gN8sY/110/500-N-Andrews-Ave-Fort-Lauderdale-FL-Primary-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/loopnet-500-n-andrews-ave.md"
+      ],
+      "flags": [
+        "Fails ≥6.5k SF thesis without assembly",
+        "corporate_podium_policy → yellow/red per tower SNDA carve-outs"
+      ],
+      "status": "rejected-policy"
+    },
+    {
+      "id": "1517-e-las-olas",
+      "headline": "1517 E Las Olas · former full bar inline",
+      "addressLine": "1517 E Las Olas Blvd",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33301",
+      "lat": 26.1192,
+      "lng": -80.139,
+      "corridor": "Las Olas prestige spine",
+      "sfDisplay": "±3,200 SF inline bar shell",
+      "rentDisplay": "Upon request PDP",
+      "rentNotes": "Patios marketed—premium corridor but below expansion SF gate standalone",
+      "listingSource": "LoopNet 36197034",
+      "agents": [],
+      "images": [
+        "https://images1.loopnet.com/i2/exeurOItpMOaOiSBb_rCwrEmLGg4GJwYLiPl8kdfiQo/110/1517-E-Las-Olas-Blvd-Fort-Lauderdale-FL-Building-Photo-1-Large.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/loopnet-1517-e-las-olas-blvd.md"
+      ],
+      "flags": [
+        "Below ±6.5k gate unless contiguous assembly surfaces",
+        "Inline parking stack + residential adjacency noise diligence"
+      ],
+      "status": "appendix"
+    },
+    {
+      "id": "201-sw-2nd-nightlife-sale",
+      "headline": "201 SW 2nd (district) · built-out nightclub comp (Crexi)",
+      "addressLine": "201 SW 2nd St",
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "zip": "33301",
+      "lat": 26.1189,
+      "lng": -80.1463,
+      "corridor": "CBD liquor corridor comp",
+      "sfDisplay": "±4,600 SF retail nightlife (Crexi flyer)",
+      "rentDisplay": "Sale marketed $500k (verify live flyer)",
+      "rentNotes": "Sub-6.5k gate—economics benchmarking only vs expansion shell hunt",
+      "listingSource": "Crexi asset 2438768 · Prakas & Company",
+      "agents": [
+        {
+          "name": "Chas Prakas",
+          "email": null,
+          "phone": null,
+          "company": "Prakas & Company"
+        }
+      ],
+      "images": [
+        "https://images.crexi.com/assets/2438768/94c4a56262894e8490ab5bd3c8b8dbf5_undefinedx200_resize.jpg"
+      ],
+      "artifactPaths": [
+        "cities/fort-lauderdale/data/scrapes/pdp/crexi-2438768-201-sw-2-nightlife.md"
+      ],
+      "flags": [
+        "For-sale nightlife comp—not a lease shortlist anchor",
+        "Validate license + hours transferable assumptions with FL counsel only"
+      ],
+      "status": "reference"
+    }
+  ]
+}

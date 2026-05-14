@@ -1,0 +1,318 @@
+{
+  "_meta": {
+    "city": "Austin",
+    "state": "TX",
+    "generatedFrom": [
+      "playbook-both-standard-reject-2026-05-13.md",
+      "playbook-ut-moody-core-deep-reject-2026-05-13.md",
+      "Crexi / PDP scrapes under cities/austin/data/scrapes/"
+    ],
+    "coordinateDisclaimer": "Property and venue coordinates are approximate map centroids. Miles shown are straight-line (haversine), not drive time.",
+    "venues": {
+      "moody": { "label": "Moody Center", "lat": 30.2845, "lng": -97.734 },
+      "dkr": { "label": "DKR · UT Stadium", "lat": 30.2767, "lng": -97.7338 },
+      "q2": { "label": "Q2 Stadium", "lat": 30.3878, "lng": -97.7194 }
+    }
+  },
+  "properties": [
+    {
+      "id": "510-neches",
+      "headline": "510–512 Neches · Historic restaurant/bar shell",
+      "addressLine": "510–512 Neches St",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.2679,
+      "lng": -97.7369,
+      "corridor": "ut-moody-core",
+      "sfDisplay": "3,900 SF (RRG PDP shell) · broker-verify vs ≥6.5k gate",
+      "rentDisplay": null,
+      "rentNotes": "BASE LEASE: CALL (PDP)",
+      "listingSource": "RRGCRE · Crexi index",
+      "agents": [
+        {
+          "name": "Jeremy Rushing",
+          "email": "jeremy@rrgcre.com",
+          "phone": "830.929.5224",
+          "company": "Restaurant Realty Group"
+        }
+      ],
+      "images": [
+        "https://images.crexi.com/lease-assets/1036555/b2d43b82c06745ad9d04f1e33a59f02b_716x444.jpg",
+        "https://static.wixstatic.com/media/8c6874_cce6d77782b14fd9a7a36c6513f326ba~mv2.jpg/v1/fit/w_1920,h_749,q_90,enc_avif,quality_auto/8c6874_cce6d77782b14fd9a7a36c6513f326ba~mv2.jpg",
+        "https://static.wixstatic.com/media/8c6874_7905f3f0c7a2435688ae56e205b0b8ce~mv2.jpg/v1/fit/w_1920,h_749,q_90,enc_avif,quality_auto/8c6874_7905f3f0c7a2435688ae56e205b0b8ce~mv2.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/pdp/510-512-neches-rrgcre.md",
+        "cities/austin/data/scrapes/crexi-downtown-restaurants-2026-05-13.md"
+      ],
+      "flags": [
+        "DMU (verify GIS)",
+        "Fails SF expansion gate vs 6.5k thesis",
+        "Red River / Old 6th — noise differs from Rainey towers"
+      ],
+      "status": "diligence"
+    },
+    {
+      "id": "710-w-6th",
+      "headline": "710 W 6th St · LoopNet teaser only",
+      "addressLine": "710 W 6th St",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.2705,
+      "lng": -97.7498,
+      "corridor": "ut-moody-core",
+      "sfDisplay": "Unknown — LoopNet PDP gated",
+      "rentDisplay": null,
+      "rentNotes": "Not disclosed on teaser",
+      "listingSource": "LoopNet (blocked full PDP)",
+      "agents": [],
+      "images": [],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/pdp/teaser-loopnet-710-w-6th.md",
+        "cities/austin/data/scrapes/pdp/loopnet-710-w-6th-austin.md"
+      ],
+      "flags": ["West 6 spine thesis only", "Akamai/login wall on full scrape"],
+      "status": "diligence"
+    },
+    {
+      "id": "501-congress",
+      "headline": "501 Congress Ave · podium retail bands",
+      "addressLine": "501 Congress Ave",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.2664,
+      "lng": -97.7437,
+      "corridor": "ut-moody-core",
+      "sfDisplay": "7,663 – 12,524 SF (Crexi index)",
+      "rentDisplay": null,
+      "rentNotes": "Undisclosed on Crexi index",
+      "listingSource": "Crexi index · Endeavor archetype",
+      "agents": [],
+      "images": [
+        "https://images.crexi.com/lease-assets/863565/7486862d19b749619ca04f39d8de6252_716x444.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/crexi-downtown-restaurants-2026-05-13.md"
+      ],
+      "flags": [
+        "corporate_podium_policy → reject shortlist",
+        "Verify landlord carve-out before any exception"
+      ],
+      "status": "rejected-policy"
+    },
+    {
+      "id": "100-congress",
+      "headline": "100 Congress · podium retail",
+      "addressLine": "100 Congress Ave",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.2662,
+      "lng": -97.7436,
+      "corridor": "ut-moody-core",
+      "sfDisplay": "7,601 SF (Crexi index)",
+      "rentDisplay": null,
+      "rentNotes": "Undisclosed on Crexi index",
+      "listingSource": "Crexi index",
+      "agents": [],
+      "images": [
+        "https://images.crexi.com/lease-assets/863491/b4359b19b89e46f688114a1df4323176_716x444.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/crexi-downtown-restaurants-2026-05-13.md"
+      ],
+      "flags": ["corporate_podium_policy → reject shortlist"],
+      "status": "rejected-policy"
+    },
+    {
+      "id": "90-rainey",
+      "headline": "90 Rainey St · The Modern basement retail",
+      "addressLine": "90 Rainey St",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.259,
+      "lng": -97.7395,
+      "corridor": "rainey",
+      "sfDisplay": "Basement retail (Crexi)",
+      "rentDisplay": null,
+      "rentNotes": "Undisclosed",
+      "listingSource": "Crexi index",
+      "agents": [],
+      "images": [
+        "https://images.crexi.com/lease-assets/927937/6db8e2ed6f724a079183fcf84135e51b_716x444.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/crexi-downtown-restaurants-2026-05-13.md"
+      ],
+      "flags": [
+        "Residential tower strata / basement",
+        "condo_policy + amplified caution"
+      ],
+      "status": "rejected-policy"
+    },
+    {
+      "id": "44-east",
+      "headline": "44 East Ave #100 · Rainey condo retail",
+      "addressLine": "44 East Ave #100",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.2595,
+      "lng": -97.7388,
+      "corridor": "rainey",
+      "sfDisplay": "7,050 SF interior + 2,108 SF exterior (flyer)",
+      "rentDisplay": null,
+      "rentNotes": "Price upon request",
+      "listingSource": "Urbanspace flyer · Crexi",
+      "agents": [
+        {
+          "name": "Michael Searls",
+          "email": "michael@urbanspacecommercial.com",
+          "phone": "512.730.1104",
+          "company": "Urbanspace",
+          "title": "VP Commercial Real Estate"
+        },
+        {
+          "name": "Hayden Edwards",
+          "email": "hayden@urbanspacecommercial.com",
+          "phone": "512.966.2637",
+          "company": "Urbanspace"
+        }
+      ],
+      "images": [
+        "https://images.crexi.com/lease-assets/1109532/a979680be1b34dbd97e64224461c98ff_716x444.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/pdp/44-east-flyer-extracted.md"
+      ],
+      "flags": [
+        "condo_policy → appendix / reject",
+        "HOA strata • outdoor amplified diligence"
+      ],
+      "status": "rejected-policy"
+    },
+    {
+      "id": "1915-mlk",
+      "headline": "1915 E MLK Jr Blvd · interior + courtyard",
+      "addressLine": "1915 E MLK Jr Blvd",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78702",
+      "lat": 30.2797,
+      "lng": -97.7248,
+      "corridor": "ut-moody-core",
+      "sfDisplay": "~2,895 SF interior + ~1k SF courtyard (PDP)",
+      "rentDisplay": null,
+      "rentNotes": "CALL (RRG PDP)",
+      "listingSource": "RRGCRE PDP",
+      "agents": [
+        {
+          "name": "Restaurant Realty Group",
+          "email": null,
+          "phone": null,
+          "company": "RRGCRE"
+        }
+      ],
+      "images": [
+        "https://static.wixstatic.com/media/8c6874_4cccfc721cda4ce28958742d073e0287~mv2.jpg/v1/fit/w_1920,h_749,q_90,enc_avif,quality_auto/8c6874_4cccfc721cda4ce28958742d073e0287~mv2.jpg",
+        "https://static.wixstatic.com/media/8c6874_2b5fbb6cf8cc485eb0f6d3c3067d1d57~mv2.jpg/v1/fit/w_1920,h_749,q_90,enc_avif,quality_auto/8c6874_2b5fbb6cf8cc485eb0f6d3c3067d1d57~mv2.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/pdp/1915-mlk-rrgcre-251001.md"
+      ],
+      "flags": [
+        "Fails ≥6.5k contiguous gate",
+        "East of CBD hotel spine — thesis yellow"
+      ],
+      "status": "appendix"
+    },
+    {
+      "id": "5610-ih35",
+      "headline": "5610 N Interstate Hwy 35 · flex / commissary stack",
+      "addressLine": "5610 N Interstate Hwy 35",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78751",
+      "lat": 30.3178,
+      "lng": -97.7138,
+      "corridor": "north-central",
+      "sfDisplay": "≤8,376 SF contiguous (CityFeet billboard)",
+      "rentDisplay": null,
+      "rentNotes": "Contact listing office",
+      "listingSource": "CityFeet PDP",
+      "agents": [
+        {
+          "name": "Brian James",
+          "email": null,
+          "phone": "207-250-2412",
+          "company": null
+        }
+      ],
+      "images": [
+        "https://images1.cityfeet.com/i2/5Lmh1Jbelf_srZqm9OSmh_6wZchWzwSAvFjd_vsDRpI/105/image.jpg",
+        "https://images1.cityfeet.com/i2/jWCgfAU9MDgA89fJpavYhQxofBzDKX-9V0mNsXqVhsQ/105/image.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/pdp/cityfeet-5610-n-interstate-35.md"
+      ],
+      "flags": [
+        "Commissary / ghost-kitchen typology — fails hospitality spectacle thesis"
+      ],
+      "status": "appendix"
+    },
+    {
+      "id": "816-congress",
+      "headline": "816 Congress Ave · Frost-adjacent retail slices",
+      "addressLine": "816 Congress Ave",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.2685,
+      "lng": -97.7437,
+      "corridor": "ut-moody-core",
+      "sfDisplay": "2,688 – 3,100 SF (Crexi index)",
+      "rentDisplay": null,
+      "rentNotes": "Undisclosed",
+      "listingSource": "Crexi index",
+      "agents": [],
+      "images": [
+        "https://images.crexi.com/lease-assets/1116787/55779e58f20b4208a634d9ac04dc9e7b_716x444.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/crexi-downtown-restaurants-2026-05-13.md"
+      ],
+      "flags": ["Below ~6.5k SF promotion threshold (playbook)"],
+      "status": "reference"
+    },
+    {
+      "id": "601-congress",
+      "headline": "601 Congress · Littlefield Building (mixed spaces)",
+      "addressLine": "601 Congress Ave",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "lat": 30.2675,
+      "lng": -97.7428,
+      "corridor": "ut-moody-core",
+      "sfDisplay": "2,012 – 5,933 SF · Office / Restaurant mix (Crexi)",
+      "rentDisplay": null,
+      "rentNotes": "Undisclosed",
+      "listingSource": "Crexi index",
+      "agents": [],
+      "images": [
+        "https://images.crexi.com/lease-assets/21456/1a02341a9f4c4c2f89fe5cfe72d7a327_716x444.jpg"
+      ],
+      "artifactPaths": [
+        "cities/austin/data/scrapes/crexi-downtown-restaurants-2026-05-13.md"
+      ],
+      "flags": [
+        "Band crosses SF gate only at upper range — verify contiguous envelope"
+      ],
+      "status": "reference"
+    }
+  ]
+}

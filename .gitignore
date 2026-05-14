@@ -1,0 +1,27 @@
+# Dependencies & build output
+**/node_modules/
+control-center/dist/
+*.tsbuildinfo
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# OS & editors
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Logs & debug
+*.log
+npm-debug.log*
+
+# Optional: omit very large local receipt dumps from git (uncomment if needed)
+# cities/**/data/receipts/*.json
+
+# Screenshots (optional — remove line if you want design review PNGs in repo)
+# screenshots/
