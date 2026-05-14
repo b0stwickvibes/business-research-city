@@ -5,9 +5,9 @@ Portal: Texas Open Data `naix-2893` — [Mixed Beverage Gross Receipts](https://
 
 ## Files
 
-| File                                                            |  Rows | Description                                                                                                                          |
-| --------------------------------------------------------------- | ----: | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `mixed-beverage-travis-core-downtown-zips-full-2026-05-13.json` | 69311 | Obligation filings where `location_zip` ∈ {78701,78703,78705} (~`ut-moody-core` hotel/campus wedge + west campus adjacency proxies). |
+| File                                                            |  Rows | Description                                                                                                                                                                |
+| --------------------------------------------------------------- | ----: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mixed-beverage-travis-core-downtown-zips-full-2026-05-13.json` | 69311 | _(optional local Download; **not stored in git** — see `data/receipts/README.md`)_ Obligation filings where `location_zip` ∈ {78701,78703,78705} (~`ut-moody-core` wedge). |
 
 ## Food vs alcohol limitation (critical)
 

@@ -26,10 +26,17 @@ Date: 2026-05-14
 
 ## Review
 
-- [x] **Design review**: `DESIGN_REVIEW.md` in `.design/control-center/` + link to `screenshots/design-review-control-center/` for visual evidence.
+- [x] **Design review**: `DESIGN_REVIEW.md` — screenshot script: `cd control-center && npm run screenshots:design-review`.
+
+## Ship / infra
+
+- [x] **GitHub Actions**: `.github/workflows/control-center.yml` uploads **`control-center-dist`** artifact on `main`.
+- [x] **Large receipt JSON**: `*-zips-full-*.json` gitignored; `cities/austin/data/receipts/README.md` documents re-download.
+- [x] **Zo hosting guide**: `docs/ZO.md` (+ `docs/DEPLOY.md` links).
 
 ## Deferred (backlog)
 
 - [ ] URL query sync (`?market=` / `?tab=`).
 - [ ] Glob-based market discovery instead of static `research-markets.tsx` imports.
 - [ ] Dark mode token pair.
+- [ ] **Rewrite git history** to drop the 59 MB file from past commits (optional — use BFG / `git filter-repo` if clone size matters).

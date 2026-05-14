@@ -32,7 +32,7 @@ Older pilot files may still live under `~/.firecrawl/playbooks/<city>/`; new run
 ## Git & live dashboard
 
 - **Repository:** initialize or clone, then add remote `b0stwickvibes/business-research-city` (see **`docs/DEPLOY.md`**).
-- **Zo / static hosting:** build `control-center` → deploy **`control-center/dist`**; the app’s **Refresh** reloads after you publish a new build.
+- **Zo / static hosting:** see **`docs/ZO.md`** — build `control-center` → deploy **`control-center/dist`**; the app’s **Refresh** reloads after you publish a new build. **CI:** workflow **`control-center`** uploads a **`control-center-dist`** artifact on `main`.
 
 ## Control Center (optional UI)
 

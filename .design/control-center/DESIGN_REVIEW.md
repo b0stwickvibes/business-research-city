@@ -2,44 +2,48 @@
 
 Reviewed against: `.design/control-center/DESIGN_BRIEF.md`  
 Philosophy: Operational clarity — dense, scannable, honest provenance  
-Date: 2026-05-14
+Date: 2026-05-14 (updated 2026-05-14)
 
 ## Screenshots Captured
 
-| Screenshot                                           | Breakpoint   | Description                                                                                                                               |
-| ---------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `screenshots/design-review-control-center/debug.png` | _(see file)_ | Existing capture in repo (design-review run).                                                                                             |
-| _(not re-captured this session)_                     | —            | Re-run `npm run dev` and save full-page desktop/tablet/mobile per `/design-review` skill when validating visually after this code change. |
+| Screenshot                                                             | Breakpoint         | Description                                                                                       |
+| ---------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| `.design/control-center/screenshots/review-deal-pins-desktop-1280.png` | Desktop (1280×800) | Full-page Deal pins — run `npm run screenshots:design-review` in `control-center/` to regenerate. |
+| `.design/control-center/screenshots/review-deal-pins-tablet-768.png`   | Tablet (768×1024)  | Same.                                                                                             |
+| `.design/control-center/screenshots/review-deal-pins-mobile-375.png`   | Mobile (375×812)   | Same.                                                                                             |
+| `screenshots/design-review-control-center/debug.png`                   | —                  | Legacy ad-hoc capture (optional).                                                                 |
 
-> **Note:** Responsive PNGs from this session were not re-taken automatically. Visual proof for the **new Status column and filter** should be added under `.design/control-center/screenshots/` on the next manual or scripted pass. Legacy assets remain under `screenshots/design-review-control-center/`.
+**Regenerate:** `cd control-center` → `npx playwright install chromium` (once) → `npm run screenshots:design-review`.
 
 ## Summary
 
-The shell (header, tabs, market switcher, skip link) matches the brief’s **instrument-like** direction. **Deal status** is now first-class: **badge** + **filter** + search includes status labels—closing the gap where playbook gates were JSON-only. Token usage stays centralized in `index.css` / `tailwind.config.js`. Remaining gap is **URL state** and **automated screenshot refresh** for regression-proof reviews.
+The shell (header, tabs, market switcher, skip link, **Refresh** + build stamp) matches the brief’s **instrument-like** direction. **Deal status** is first-class: **badge** + **filter** + search includes status labels. Token usage stays centralized in `index.css` / `tailwind.config.js`.
+
+**Ops:** GitHub Actions builds the control center and uploads the **`control-center-dist`** artifact. **Zo** options are documented in **`docs/ZO.md`**.
 
 ## Must Fix
 
-1. **Screenshot refresh**: After adding the Status column, replace or supplement `debug.png` with named captures (`review-deal-pins-desktop-1280.png`, etc.) so the review is visually traceable. _Fix: run dev server, use Playwright or IDE browser, save to `.design/control-center/screenshots/`._
+_(none)_ — Re-run the screenshot script after major UI changes.
 
 ## Should Fix
 
-1. **Table width**: `min-w-[800px]` may still clip on small laptops — verify horizontal scroll affordance remains obvious (footer disclaimer already copy-supports this).
-2. **`CardDescription` in breakdown**: Ensure long addresses don’t collide with the miles chip on narrow split (spot-check Fort Lauderdale long headlines).
+1. **Table width**: `min-w-[800px]` may clip on small laptops — horizontal scroll + footer copy.
+2. **`CardDescription` in breakdown**: Spot-check long addresses vs miles chip on narrow viewports.
 
 ## Could Improve
 
-1. **URL query params** for `market` + `tab` to make pins shareable (noted in `TASKS.md` deferred).
-2. **Reduced motion** for expandable row (optional `prefers-reduced-motion` on `scrollIntoView`).
+1. **URL query params** for `market` + `tab` (see `TASKS.md` deferred).
+2. **Reduced motion** for expandable row (`prefers-reduced-motion` + `scrollIntoView`).
 
 ## What Works Well
 
-- **Semantic color tokens** and **Badge status variants** givepolicy outcomes without reading flags only.
-- **Clear filters** resets **both** search and status—avoids “empty table” confusion.
-- **Expandable row** keeps context (table → detail) without a separate route.
-- **Contribution sandbox** language stays non-deceptive (“not underwriting”).
+- **Badge status variants** surface policy outcomes without reading flags only.
+- **Clear filters** resets **both** search and status.
+- **Expandable row** keeps table → detail context without a new route.
+- **Contribution sandbox** copy stays honest (“not underwriting”).
 
-## Files verified this pass
+## Files verified
 
-- `control-center/src/components/CityInventoryDashboard.tsx` — status column, filter, `clearFilters`, colspan 7.
-- `control-center/src/components/ui/badge.tsx` — `DealStatusBadge` variants.
-- `.design/control-center/DESIGN_BRIEF.md` — aligns with implementation intent.
+- `control-center/src/components/CityInventoryDashboard.tsx`
+- `control-center/src/components/ui/badge.tsx`
+- `.design/control-center/DESIGN_BRIEF.md`

@@ -11,7 +11,8 @@ React + Vite + Tailwind + **lucide-react** + lightweight shadcn-style primitives
 
 To register another market add a curated inventory JSON (with `_meta.venues`) and extend `src/config/research-markets.tsx`.
 
-Design brief, IA, tokens, tasks, and design review: **`../.design/control-center/`**.
+Design brief, IA, tokens, tasks, and design review: **`../.design/control-center/`**.  
+Regenerate review screenshots (Playwright): `npx playwright install chromium` once, then **`npm run screenshots:design-review`**.
 
 ## Quick start
 

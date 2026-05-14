@@ -20,8 +20,8 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# Optional: omit very large local receipt dumps from git (uncomment if needed)
-# cities/**/data/receipts/*.json
+# Large Texas Open Data receipt exports (download locally; see cities/*/data/receipts/README.md)
+cities/**/data/receipts/*-zips-full-*.json
 
 # Screenshots (optional — remove line if you want design review PNGs in repo)
 # screenshots/

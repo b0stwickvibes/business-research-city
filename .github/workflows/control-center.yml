@@ -1,0 +1,38 @@
+# Builds the Vite control center and uploads dist/ as a downloadable artifact (Zo, manual deploy).
+name: Control center
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "control-center/**"
+      - ".github/workflows/control-center.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "control-center/**"
+      - ".github/workflows/control-center.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: control-center
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: control-center/package-lock.json
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: control-center-dist
+          path: control-center/dist
+          if-no-files-found: error

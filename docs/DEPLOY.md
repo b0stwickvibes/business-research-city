@@ -39,18 +39,17 @@ npm run build
 
 Static assets are in **`control-center/dist/`**. That folder is what you serve on Zo (or any static host).
 
-## 3. Zo platform
+## 3. CI build artifact (GitHub Actions)
 
-**Goal:** serve `control-center/dist` as the live dashboard, and redeploy when `main` updates.
+On push to **`main`**, when `control-center/**` or `.github/workflows/control-center.yml` changes, Actions runs **`npm ci` + `npm run build`** and uploads the **`control-center-dist`** artifact. Download it for Zo or attach to a release.
 
-Implementation on Zo varies by feature set (static site upload, git pull + build, automation). Typical pattern:
+## 4. Zo platform
 
-1. Point Zo’s site root at the built **`dist`** output (upload once, or sync on each release).
-2. After you **push** new inventory JSON + run **`npm run build`**, upload/sync **`dist`** again — or wire Zo automation to run build on push.
+See **`docs/ZO.md`** for hosting options (static service, artifact download, Zo Sites / `publish_site`).
 
-The in-app **Refresh** button runs `window.location.reload()` so the browser picks up **a new deploy** after you publish updated `dist`. It does not re-pull git by itself (that’s server-side).
+The in-app **Refresh** button runs `window.location.reload()` after a new deploy. It does not run `git pull` on the server.
 
-## 4. Staying up to date (content)
+## 5. Staying up to date (content)
 
 | Layer          | How it stays fresh                                                                                             |
 | -------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +57,7 @@ The in-app **Refresh** button runs `window.location.reload()` so the browser pic
 | Live site      | Redeploy `dist` to Zo (manual or automated).                                                                   |
 | Browser        | User clicks **Refresh** after a new deploy to avoid stale cached HTML (hard refresh still available).          |
 
-## 5. Optional automation (later)
+## 6. Further automation
 
-- GitHub Action on `push` to `main`: `npm ci && npm run build` in `control-center/`, artifact `dist`, then Zo API or SSH deploy (if Zo exposes it).
-- Or Zo scheduled job: `git pull` → `npm run build` → publish static dir.
+- Wire Zo (or another host) to **poll or webhook** on new Actions artifacts / `main` and redeploy `dist`.
+- Zo scheduled job: `git pull` → `npm run build` → restart static service.
