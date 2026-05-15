@@ -20,6 +20,8 @@ Practical path: create a minimal Zo site whose build/output is replaced by this 
 
 **Public URL shape:** `sitename-yourhandle.zocomputer.io` after publish (see Zo docs).
 
+**Workspace note:** On Zo, the clone may live at **`/home/workspace/Git/b0stwickvibes/Repos/business-research-city`** (not `~/Git/...` if `$HOME` differs). Use `find … -name business-research-city` if unsure.
+
 ## Navigator Space + Zo Site (current setup)
 
 Live wiring on **dbostwick**’s Zo:
@@ -28,11 +30,11 @@ Live wiring on **dbostwick**’s Zo:
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Zo Site** (serves `control-center/dist` via Hono + Bun) | Workspace: `Git/b0stwickvibes/Repos/business-research-city/brc-control-center` — `server.ts` serves static files from `../control-center/dist`. |
 | **Public app URL**                                        | [https://brc-control-center-dbostwick.zocomputer.io](https://brc-control-center-dbostwick.zocomputer.io)                                        |
-| **zo.space page** (iframe + shared nav)                   | **`/research`** on your Space — same header nav as Home / Trading / Inventory / Greenroom, embedded dashboard.                                  |
+| **zo.space page** (iframe + shared nav)                   | **`/research`** on your Space — same header nav as Home / Trading / Inventory / Green room, embedded dashboard.                                 |
 
 **After `git pull` on Zo:** `cd Git/b0stwickvibes/Repos/business-research-city/control-center && npm ci && npm run build`, then **`publish_site`** again for `brc-control-center` if Zo does not auto-redeploy (or restart the site’s production process from the Sites UI).
 
-Mirror of the `/research` Space route source (for edits in sync with live): `docs/zo-space-research-route.tsx`.
+**Navigator Space UI (nav + home + route shells)** lives in **`docs/zo-space/`** — see [`docs/zo-space/README.md`](zo-space/README.md). Copy those components into each Zo Space route (or re-import if your Space supports multi-file). Legacy single-file alias: [`docs/zo-space-research-route.tsx`](zo-space-research-route.tsx) re-exports **`docs/zo-space/ResearchRoute.tsx`**.
 
 ## Git push → Zo (reuse your BrainOS trigger)
 
@@ -41,7 +43,7 @@ You already have **GitHub → Zo** refresh wired for **BrainOS**. Do **not** add
 After Zo has an updated clone of `b0stwickvibes/business-research-city`, the only extra steps for the live dashboard are:
 
 ```bash
-cd Git/b0stwickvibes/Repos/business-research-city/control-center
+cd /home/workspace/Git/b0stwickvibes/Repos/business-research-city/control-center
 npm ci && npm run build
 ```
 
