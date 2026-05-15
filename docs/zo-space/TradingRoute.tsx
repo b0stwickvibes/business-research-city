@@ -252,8 +252,9 @@ export default function TradingPage() {
           <strong style={{ color: C.text, fontWeight: 600 }}>
             gap-go-trader
           </strong>{" "}
-          repo on GitHub. The full trading desk (P&amp;L, tiers, state files)
-          lives in BrainOS — open the Trading view there.
+          repo on GitHub. BrainOS holds the full trading desk (P&amp;L, tiers,
+          automations); the repo ships a small operator dashboard that reads the
+          same <code>state/</code> as MCP.
         </p>
         <p
           style={{ fontSize: 13, lineHeight: 1.55, color: C.faint, margin: 0 }}
@@ -310,6 +311,70 @@ export default function TradingPage() {
             }}
           >
             Open BrainOS · Trading ↗
+          </a>
+        </div>
+
+        <div
+          style={{
+            marginTop: 28,
+            padding: "18px 20px",
+            borderRadius: 12,
+            border: `1px dashed ${C.border}`,
+            background: "rgba(24,24,27,0.55)",
+          }}
+        >
+          <p
+            style={{
+              margin: "0 0 10px",
+              fontSize: 11,
+              fontWeight: 700,
+              color: C.muted,
+              textTransform: "uppercase",
+              letterSpacing: "0.14em",
+            }}
+          >
+            Operator dashboard (from the repo)
+          </p>
+          <p
+            style={{
+              margin: "0 0 14px",
+              fontSize: 13,
+              lineHeight: 1.6,
+              color: C.muted,
+            }}
+          >
+            The dashboard{" "}
+            <strong style={{ color: C.text }}>is part of gap-go-trader</strong>:
+            it pins <code style={{ color: C.accent }}>GAP_GO_TRADER_ROOT</code>{" "}
+            to <em>this git checkout</em> and serves{" "}
+            <code style={{ color: C.muted }}>session_state</code> over HTTP. On
+            Zo, from the clone:
+            <br />
+            <code style={{ color: C.muted, fontSize: 12 }}>
+              cd /home/workspace/Projects/gap-go-trader &amp;&amp; python3
+              dashboard/serve.py
+            </code>
+            <br />
+            Then open{" "}
+            <code style={{ color: C.muted }}>http://127.0.0.1:8765</code> (bind
+            via <code>GAP_GO_DASHBOARD_*</code> if needed). This is separate
+            from BrainOS; it is the repo talking to its own <code>state/</code>.
+          </p>
+          <a
+            href={`${GAP_GO_REPO}/tree/main/dashboard`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              fontSize: 13,
+              fontWeight: 600,
+              color: C.accent,
+              textDecoration: "none",
+            }}
+          >
+            dashboard/ on GitHub ↗
           </a>
         </div>
       </main>
