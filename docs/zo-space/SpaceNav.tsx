@@ -13,7 +13,8 @@ export type SpaceNavId =
  * lives on another host. (Legacy `greenroom.html` can be swapped here without
  * touching the rest of the nav.)
  */
-export const GREENROOM_HREF = "/greenroom";
+/** Match the Space route path on Zo (see `list_space_routes` — often `greenroom.html`). */
+export const GREENROOM_HREF = "/greenroom.html";
 
 export const BRAINOS_ORIGIN = "https://brainos-dbostwick.zocomputer.io";
 

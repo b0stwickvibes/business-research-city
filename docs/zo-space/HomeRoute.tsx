@@ -148,7 +148,7 @@ export default function HomePage() {
               highlight
             />
             <DestinationCard
-              href="/greenroom"
+              href="/greenroom.html"
               title="Green room"
               desc="Pre-show staging, briefs, and last-mile prep before you go on camera or live."
               kicker="Ops"

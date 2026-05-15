@@ -2,7 +2,7 @@ import { SpaceTopNav } from "./SpaceNav";
 
 /**
  * Green room — staging / pre-show. Path should match `GREENROOM_HREF` in `SpaceNav.tsx`
- * (default `/greenroom`). If you still serve `greenroom.html`, set `GREENROOM_HREF` to that path.
+ * (default `/greenroom.html` on Zo). Use `/greenroom` only if your Space defines that route.
  */
 export default function GreenroomPage() {
   return (
